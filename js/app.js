@@ -1,6 +1,6 @@
-// // Global variables for the scoring
-// let humanScore = 0;
-// let computerScore = 0;
+// Global variables for the scoring
+let humanScore = 0;
+let computerScore = 0;
 
 
 // Function to create and return the computers selection
