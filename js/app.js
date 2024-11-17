@@ -44,27 +44,27 @@ function playRound (humanChoice, computerChoice) {
     console.log('Round Scores - User Score = ' + humanScore + ' - Computer Score = ' + computerScore);
 }
 
-// // Helper function to find out who won the game
-// function finalResults (humanResult, computerResult) {
-//     if (humanResult > computerResult) {
-//         return 'User is the champion!';
-//     } else if (computerResult > humanResult) {
-//         return 'Computer has dominated!';
-//     } else {
-//         return 'Both players are equally matched!';
-//     }
-// }
+// Helper function to find out who won the game
+function finalResults (humanResult, computerResult) {
+    if (humanResult > computerResult) {
+        return 'User is the champion!';
+    } else if (computerResult > humanResult) {
+        return 'Computer has dominated!';
+    } else {
+        return 'Both players are equally matched!';
+    }
+}
 
-// // Function to play the game multiple times
-// function playGame () {
-//     let gamePlay = prompt('How many times would you like to play?');
-//     for(let i = 0; i < gamePlay; i++) {
-//         console.log(`Round ${i+1}`);
-//         const humanSelection = getHumanChoice();
-//         const computerSelection = getComputerChoice();
-//         playRound(humanSelection, computerSelection);
-//     }
-//     console.log('Final Result: ' + finalResults(humanScore, computerScore));
-// }
+// Function to play the game multiple times
+function playGame () {
+    let gamePlay = prompt('How many times would you like to play?');
+    for(let i = 0; i < gamePlay; i++) {
+        console.log(`Round ${i+1}`);
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+    }
+    console.log('Final Result: ' + finalResults(humanScore, computerScore));
+}
 
-// playGame();
+playGame();
