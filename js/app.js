@@ -3,20 +3,20 @@
 // let computerScore = 0;
 
 
-// // Function to create and return the computers selection
-// function getComputerChoice() {
-//     let choice = Math.floor(Math.random() * 3);
-//     switch (choice) {
-//         case 0:
-//             return 'ROCK';
-//         case 1:
-//             return 'PAPER';
-//         case 2:
-//             return 'SCISSORS';
-//         default:
-//             console.log('not a valid choice');
-//     }
-// }
+// Function to create and return the computers selection
+function getComputerChoice() {
+    let choice = Math.floor(Math.random() * 3);
+    switch (choice) {
+        case 0:
+            return 'ROCK';
+        case 1:
+            return 'PAPER';
+        case 2:
+            return 'SCISSORS';
+        default:
+            console.log('not a valid choice');
+    }
+}
 
 // // Function to read in the users selection, capitalize the first letter and return it
 // function getHumanChoice() {
