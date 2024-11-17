@@ -47,6 +47,7 @@ function playRound (humanChoice, computerChoice) {
         roundResult.textContent = "We have a draw! No point awarded"
     }
     console.log('Round Scores - User Score = ' + humanScore + ' - Computer Score = ' + computerScore);
+    gameScore.textContent = `Game Scores = User Score: ${humanScore} | Computer Score: ${computerScore}`;
 }
 
 // Helper function to find out who won the game
@@ -78,9 +79,11 @@ game.appendChild(gameResults);
 const user = document.createElement("p");
 const computer = document.createElement("p");
 const roundResult = document.createElement("p");
+const gameScore = document.createElement("p");
 gameResults.appendChild(user);
 gameResults.appendChild(computer);
 gameResults.appendChild(roundResult);
+gameResults.appendChild(gameScore);
 
 
 rockBtn.addEventListener("click", () => {
