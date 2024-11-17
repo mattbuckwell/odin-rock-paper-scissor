@@ -18,11 +18,11 @@ function getComputerChoice() {
     }
 }
 
-// // Function to read in the users selection, capitalize the first letter and return it
-// function getHumanChoice() {
-//     let choice = prompt('Please select Rock, Paper or Scissors');
-//     return choice.toUpperCase();
-// }
+// Function to read in the users selection, capitalize the first letter and return it
+function getHumanChoice() {
+    let choice = prompt('Please select Rock, Paper or Scissors');
+    return choice.toUpperCase();
+}
 
 // // Function to play a round of Rock, Paper, Scissors
 // function playRound (humanChoice, computerChoice) {
