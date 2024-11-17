@@ -56,15 +56,22 @@ function finalResults (humanResult, computerResult) {
 }
 
 // Function to play the game multiple times
-function playGame () {
-    let gamePlay = prompt('How many times would you like to play?');
-    for(let i = 0; i < gamePlay; i++) {
-        console.log(`Round ${i+1}`);
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-    }
-    console.log('Final Result: ' + finalResults(humanScore, computerScore));
+function playGame (humanSelection) {
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
 }
 
-playGame();
+
+const rockBtn = document.querySelector("#rock");
+const paperBtn = document.querySelector("#paper");
+const scissorBtn = document.querySelector("#scissors");
+
+rockBtn.addEventListener("click", () => {
+    playGame(rockBtn.innerHTML.toUpperCase());
+});
+paperBtn.addEventListener("click", () => {
+    playGame(paperBtn.innerHTML.toUpperCase());
+});
+scissorBtn.addEventListener("click", () => {
+    playGame(scissorBtn.innerHTML.toUpperCase());
+});
