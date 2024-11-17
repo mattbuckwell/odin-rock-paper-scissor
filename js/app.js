@@ -24,25 +24,25 @@ function getHumanChoice() {
     return choice.toUpperCase();
 }
 
-// // Function to play a round of Rock, Paper, Scissors
-// function playRound (humanChoice, computerChoice) {
-//     console.log('User has selected - ' + humanChoice);
-//     console.log('Computer has selected - ' + computerChoice);
-//     if ((humanChoice === 'ROCK' && computerChoice === 'SCISSORS') ||
-//         (humanChoice === 'PAPER' && computerChoice === 'ROCK') ||
-//         (humanChoice === 'SCISSORS' && computerChoice === 'PAPER')) {
-//             console.log('User has won! 1 point awarded');
-//             humanScore++;
-//     } else if ((humanChoice === 'ROCK' && computerChoice === 'PAPER') ||
-//         (humanChoice === 'PAPER' && computerChoice === 'SCISSORS') ||
-//         (humanChoice === 'SCISSORS' && computerChoice === 'ROCK')) {
-//             console.log('Computer has won! 1 point awarded');
-//             computerScore++;
-//     } else {
-//         console.log('We have a draw! No point awarded');
-//     }
-//     console.log('Round Scores - User Score = ' + humanScore + ' - Computer Score = ' + computerScore);
-// }
+// Function to play a round of Rock, Paper, Scissors
+function playRound (humanChoice, computerChoice) {
+    console.log('User has selected - ' + humanChoice);
+    console.log('Computer has selected - ' + computerChoice);
+    if ((humanChoice === 'ROCK' && computerChoice === 'SCISSORS') ||
+        (humanChoice === 'PAPER' && computerChoice === 'ROCK') ||
+        (humanChoice === 'SCISSORS' && computerChoice === 'PAPER')) {
+            console.log('User has won! 1 point awarded');
+            humanScore++;
+    } else if ((humanChoice === 'ROCK' && computerChoice === 'PAPER') ||
+        (humanChoice === 'PAPER' && computerChoice === 'SCISSORS') ||
+        (humanChoice === 'SCISSORS' && computerChoice === 'ROCK')) {
+            console.log('Computer has won! 1 point awarded');
+            computerScore++;
+    } else {
+        console.log('We have a draw! No point awarded');
+    }
+    console.log('Round Scores - User Score = ' + humanScore + ' - Computer Score = ' + computerScore);
+}
 
 // // Helper function to find out who won the game
 // function finalResults (humanResult, computerResult) {
