@@ -27,19 +27,24 @@ function getHumanChoice() {
 // Function to play a round of Rock, Paper, Scissors
 function playRound (humanChoice, computerChoice) {
     console.log('User has selected - ' + humanChoice);
+    user.textContent = `User has selected - ${humanChoice}`;
     console.log('Computer has selected - ' + computerChoice);
+    computer.textContent = `Computer has selected - ${computerChoice}`;
     if ((humanChoice === 'ROCK' && computerChoice === 'SCISSORS') ||
         (humanChoice === 'PAPER' && computerChoice === 'ROCK') ||
         (humanChoice === 'SCISSORS' && computerChoice === 'PAPER')) {
             console.log('User has won! 1 point awarded');
+            roundResult.textContent = "User has won! 1 point awarded"
             humanScore++;
     } else if ((humanChoice === 'ROCK' && computerChoice === 'PAPER') ||
         (humanChoice === 'PAPER' && computerChoice === 'SCISSORS') ||
         (humanChoice === 'SCISSORS' && computerChoice === 'ROCK')) {
             console.log('Computer has won! 1 point awarded');
+            roundResult.textContent = "Computer has won! 1 point awarded"
             computerScore++;
     } else {
         console.log('We have a draw! No point awarded');
+        roundResult.textContent = "We have a draw! No point awarded"
     }
     console.log('Round Scores - User Score = ' + humanScore + ' - Computer Score = ' + computerScore);
 }
@@ -65,6 +70,18 @@ function playGame (humanSelection) {
 const rockBtn = document.querySelector("#rock");
 const paperBtn = document.querySelector("#paper");
 const scissorBtn = document.querySelector("#scissors");
+
+const game = document.querySelector(".game-container");
+const gameResults = document.createElement("div");
+game.appendChild(gameResults);
+
+const user = document.createElement("p");
+const computer = document.createElement("p");
+const roundResult = document.createElement("p");
+gameResults.appendChild(user);
+gameResults.appendChild(computer);
+gameResults.appendChild(roundResult);
+
 
 rockBtn.addEventListener("click", () => {
     playGame(rockBtn.innerHTML.toUpperCase());
