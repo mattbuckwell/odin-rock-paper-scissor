@@ -1,3 +1,32 @@
+// Query selection and creation of all elements of the game
+const rockBtn = document.querySelector("#rock");
+const paperBtn = document.querySelector("#paper");
+const scissorBtn = document.querySelector("#scissors");
+const finishBtn = document.querySelector("#finish");
+const reset = document.querySelector("#reset");
+
+const game = document.querySelector(".game-container");
+
+const gameResults = document.createElement("div");
+
+const user = document.createElement("p");
+const computer = document.createElement("p");
+const roundResult = document.createElement("p");
+const gameScore = document.createElement("p");
+
+const winnerResults = document.createElement("div");
+const winner = document.createElement("h3");
+
+game.appendChild(gameResults);
+game.appendChild(winnerResults);
+
+gameResults.appendChild(user);
+gameResults.appendChild(computer);
+gameResults.appendChild(roundResult);
+gameResults.appendChild(gameScore);
+
+winnerResults.appendChild(winner);
+
 // Global variables for the scoring
 let humanScore = 0;
 let computerScore = 0;
@@ -41,6 +70,7 @@ function playRound (humanChoice, computerChoice) {
 // Helper function to find out who won the game
 function finalResults (humanResult, computerResult) {
     if (humanResult > computerResult) {
+        winner.style.color = "green";
         return 'User is the champion!';
     } else if (computerResult > humanResult) {
         return 'Computer has dominated!';
@@ -55,40 +85,33 @@ function playGame (humanSelection) {
     playRound(humanSelection, computerSelection);
 }
 
+// Function to clear the game board for a new game
+function clearAll() {
+    user.textContent = "";
+    computer.textContent = "";
+    roundResult.textContent = "";
+    gameScore.textContent = "";
+    humanScore = 0;
+    computerScore = 0;
+    winner.textContent = "";
+};
 
-const rockBtn = document.querySelector("#rock");
-const paperBtn = document.querySelector("#paper");
-const scissorBtn = document.querySelector("#scissors");
-const finishBtn = document.querySelector("#finish");
-
-const game = document.querySelector(".game-container");
-const gameResults = document.createElement("div");
-game.appendChild(gameResults);
-
-const user = document.createElement("p");
-const computer = document.createElement("p");
-const roundResult = document.createElement("p");
-const gameScore = document.createElement("p");
-gameResults.appendChild(user);
-gameResults.appendChild(computer);
-gameResults.appendChild(roundResult);
-gameResults.appendChild(gameScore);
-
-const winnerResults = document.createElement("div");
-game.appendChild(winnerResults);
-
-const winner = document.createElement("h3");
-winnerResults.appendChild(winner);
-
+// Event Listeners for the buttons
 rockBtn.addEventListener("click", () => {
     playGame(rockBtn.innerHTML.toUpperCase());
 });
+
 paperBtn.addEventListener("click", () => {
     playGame(paperBtn.innerHTML.toUpperCase());
 });
+
 scissorBtn.addEventListener("click", () => {
     playGame(scissorBtn.innerHTML.toUpperCase());
 });
+
 finishBtn.addEventListener("click", () => {
     winner.textContent = finalResults(humanScore, computerScore);
 });
+
+reset.addEventListener("click", clearAll);
+
