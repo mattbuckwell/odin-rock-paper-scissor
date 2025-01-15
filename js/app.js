@@ -73,8 +73,10 @@ function finalResults (humanResult, computerResult) {
         winner.style.color = "green";
         return 'User is the champion!';
     } else if (computerResult > humanResult) {
+        winner.style.color = "red";
         return 'Computer has dominated!';
     } else {
+        winner.style.color = "black";
         return 'Both players are equally matched!';
     }
 }
