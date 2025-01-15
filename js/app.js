@@ -1,9 +1,9 @@
 // Query selection and creation of all elements of the game
-const rockBtn = document.querySelector("#rock");
-const paperBtn = document.querySelector("#paper");
-const scissorBtn = document.querySelector("#scissors");
-const finishBtn = document.querySelector("#finish");
-const reset = document.querySelector("#reset");
+const rockBtn = document.querySelector(".rock");
+const paperBtn = document.querySelector(".paper");
+const scissorBtn = document.querySelector(".scissors");
+const finishBtn = document.querySelector(".finish");
+const reset = document.querySelector(".reset");
 
 const game = document.querySelector(".game-container");
 
