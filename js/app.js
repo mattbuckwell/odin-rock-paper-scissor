@@ -7,10 +7,12 @@ const reset = document.querySelector(".reset");
 
 const game = document.querySelector(".game-container");
 
+const choiceResult = document.createElement("div");
+
 const gameResults = document.createElement("div");
 
-const user = document.createElement("img");
-const computer = document.createElement("img");
+const userImg = document.createElement("img");
+const computerImg = document.createElement("img");
 const roundResult = document.createElement("p");
 const gameScore = document.createElement("p");
 
@@ -20,8 +22,10 @@ const winner = document.createElement("h3");
 game.appendChild(gameResults);
 game.appendChild(winnerResults);
 
-gameResults.appendChild(user);
-gameResults.appendChild(computer);
+choiceResult.appendChild(userImg);
+choiceResult.appendChild(computerImg);
+
+gameResults.appendChild(choiceResult);
 gameResults.appendChild(roundResult);
 gameResults.appendChild(gameScore);
 
@@ -49,8 +53,8 @@ function getComputerChoice() {
 
 // Function to play a round of Rock, Paper, Scissors
 function playRound (humanChoice, computerChoice) {
-    user.src = `./img/${humanChoice}.svg`;
-    computer.src = `./img/${computerChoice}.svg`;
+    userImg.src = `./img/${humanChoice}.svg`;
+    computerImg.src = `./img/${computerChoice}.svg`;
     if ((humanChoice === 'ROCK' && computerChoice === 'SCISSORS') ||
         (humanChoice === 'PAPER' && computerChoice === 'ROCK') ||
         (humanChoice === 'SCISSORS' && computerChoice === 'PAPER')) {
@@ -89,8 +93,8 @@ function playGame (humanSelection) {
 
 // Function to clear the game board for a new game
 function clearAll() {
-    user.textContent = "";
-    computer.textContent = "";
+    userImg.src = "";
+    computerImg.src = "";
     roundResult.textContent = "";
     gameScore.textContent = "";
     humanScore = 0;
