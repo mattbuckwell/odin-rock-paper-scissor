@@ -10,7 +10,7 @@ const game = document.querySelector(".game-container");
 const gameResults = document.createElement("div");
 
 const user = document.createElement("img");
-const computer = document.createElement("p");
+const computer = document.createElement("img");
 const roundResult = document.createElement("p");
 const gameScore = document.createElement("p");
 
@@ -50,7 +50,7 @@ function getComputerChoice() {
 // Function to play a round of Rock, Paper, Scissors
 function playRound (humanChoice, computerChoice) {
     user.src = `./img/${humanChoice}.svg`;
-    computer.textContent = `Computer has selected - ${computerChoice}`;
+    computer.src = `./img/${computerChoice}.svg`;
     if ((humanChoice === 'ROCK' && computerChoice === 'SCISSORS') ||
         (humanChoice === 'PAPER' && computerChoice === 'ROCK') ||
         (humanChoice === 'SCISSORS' && computerChoice === 'PAPER')) {
