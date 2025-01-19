@@ -35,3 +35,9 @@ h2 {
     justify-content: space-evenly;
     padding: 20px 0;
 }
+
+.choice + p,
+.choice + p + p {
+    text-align: center;
+    font-weight: bold;
+}
