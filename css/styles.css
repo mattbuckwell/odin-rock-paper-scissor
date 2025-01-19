@@ -29,3 +29,9 @@ h2 {
     font-weight: bold;
     border: none;
 }
+
+.choice {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}

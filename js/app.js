@@ -8,6 +8,7 @@ const reset = document.querySelector(".reset");
 const game = document.querySelector(".game-container");
 
 const choiceResult = document.createElement("div");
+choiceResult.classList.add("choice")
 
 const gameResults = document.createElement("div");
 
@@ -24,6 +25,7 @@ game.appendChild(winnerResults);
 
 choiceResult.appendChild(userImg);
 choiceResult.appendChild(computerImg);
+
 
 gameResults.appendChild(choiceResult);
 gameResults.appendChild(roundResult);
