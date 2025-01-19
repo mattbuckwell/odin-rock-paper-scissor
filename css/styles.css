@@ -16,7 +16,7 @@ h3 {
 }
 
 .game-container {
-    border: 1px solid #000;
+    
 }
 
 .btn {
@@ -25,16 +25,21 @@ h3 {
     height:30px;
     margin: 0 5px;
     color: #fff;
-    background-color: #000;
+    background-color:midnightblue;
     font-size: 1rem;
     font-weight: bold;
     border: none;
 }
 
+.reset,
+.finish {
+    background-color: forestgreen;
+}
+
 .choice {
     display: flex;
     justify-content: space-evenly;
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 .choice + p,
