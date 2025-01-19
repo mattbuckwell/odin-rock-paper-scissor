@@ -102,6 +102,9 @@ function clearAll() {
     humanScore = 0;
     computerScore = 0;
     winner.textContent = "";
+    rockBtn.disabled = false;
+    paperBtn.disabled = false;
+    scissorBtn.disabled = false;
 };
 
 // Event Listeners for the buttons
@@ -119,6 +122,9 @@ scissorBtn.addEventListener("click", () => {
 
 finishBtn.addEventListener("click", () => {
     winner.textContent = finalResults(humanScore, computerScore);
+    rockBtn.disabled = true;
+    paperBtn.disabled = true;
+    scissorBtn.disabled = true;
 });
 
 reset.addEventListener("click", clearAll);
