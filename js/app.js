@@ -18,7 +18,9 @@ const computerImg = document.createElement("img");
 
 // p elements below to be changed
 const resultRound = document.createElement("div");
+resultRound.classList.add("result-round");
 const gameScore = document.createElement("div");
+gameScore.classList.add("game-score");
 
 // final result display
 const winnerResults = document.createElement("div");
@@ -33,7 +35,7 @@ choiceResult.appendChild(computerImg);
 
 resultContainer.appendChild(choiceResult);
 resultContainer.appendChild(resultRound);
-resultContainer.appendChild(gameScore);
+resultRound.appendChild(gameScore);
 
 winnerResults.appendChild(winner);
 
