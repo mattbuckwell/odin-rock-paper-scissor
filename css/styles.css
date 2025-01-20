@@ -15,9 +15,22 @@ h3 {
     text-align: center;
 }
 
-/* .game-container {
-    
-} */
+.game-header {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.game-header h1 {
+    margin-right: 30px;
+}
+
+.header-btn {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
 
 .btn {
     border-radius: 10px;
