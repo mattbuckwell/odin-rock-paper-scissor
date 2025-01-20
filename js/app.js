@@ -5,31 +5,35 @@ const scissorBtn = document.querySelector(".scissors");
 const finishBtn = document.querySelector(".finish");
 const reset = document.querySelector(".reset");
 
-const game = document.querySelector(".game-container");
+const gameContainer = document.querySelector(".game-container");
+
+const resultContainer = document.createElement("div");
 
 const choiceResult = document.createElement("div"); // <-- container to hold the images
 choiceResult.classList.add("choice")
 
-const gameResults = document.createElement("div");
-
 const userImg = document.createElement("img");
 const computerImg = document.createElement("img");
-const roundResult = document.createElement("p");
-const gameScore = document.createElement("p");
 
+
+// p elements below to be changed
+const resultRound = document.createElement("div");
+const gameScore = document.createElement("div");
+
+// final result display
 const winnerResults = document.createElement("div");
 const winner = document.createElement("h3");
 
-game.appendChild(gameResults);
-game.appendChild(winnerResults);
+gameContainer.appendChild(resultContainer);
+gameContainer.appendChild(winnerResults);
 
 choiceResult.appendChild(userImg);
 choiceResult.appendChild(computerImg);
 
 
-gameResults.appendChild(choiceResult);
-gameResults.appendChild(roundResult);
-gameResults.appendChild(gameScore);
+resultContainer.appendChild(choiceResult);
+resultContainer.appendChild(resultRound);
+resultContainer.appendChild(gameScore);
 
 winnerResults.appendChild(winner);
 
@@ -60,20 +64,21 @@ function playRound (humanChoice, computerChoice) {
     if ((humanChoice === 'ROCK' && computerChoice === 'SCISSORS') ||
         (humanChoice === 'PAPER' && computerChoice === 'ROCK') ||
         (humanChoice === 'SCISSORS' && computerChoice === 'PAPER')) {
-            roundResult.textContent = "User has won! 1 point awarded"
+            console.log("User has won! 1 point awarded");
             humanScore++;
             choiceResult.style.backgroundColor = "#37fa3d";
     } else if ((humanChoice === 'ROCK' && computerChoice === 'PAPER') ||
         (humanChoice === 'PAPER' && computerChoice === 'SCISSORS') ||
         (humanChoice === 'SCISSORS' && computerChoice === 'ROCK')) {
-            roundResult.textContent = "Computer has won! 1 point awarded"
+            console.log("Computer has won! 1 point awarded");
             computerScore++;
             choiceResult.style.backgroundColor = "#fa3737";
     } else {
-        roundResult.textContent = "We have a draw! No point awarded"
+        console.log("We have a draw! No point awarded");
         choiceResult.style.backgroundColor = "#fff";
     }
-    gameScore.textContent = `Game Scores = User Score: ${humanScore} | Computer Score: ${computerScore}`;
+    console.log(`Game Scores = User Score: ${humanScore} | Computer Score: ${computerScore}`);
+    //gameScore.textContent = `Game Scores = User Score: ${humanScore} | Computer Score: ${computerScore}`;
 }
 
 // Helper function to find out who won the game
