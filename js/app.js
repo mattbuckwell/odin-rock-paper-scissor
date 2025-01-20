@@ -7,7 +7,7 @@ const reset = document.querySelector(".reset");
 
 const game = document.querySelector(".game-container");
 
-const choiceResult = document.createElement("div");
+const choiceResult = document.createElement("div"); // <-- container to hold the images
 choiceResult.classList.add("choice")
 
 const gameResults = document.createElement("div");
@@ -62,13 +62,16 @@ function playRound (humanChoice, computerChoice) {
         (humanChoice === 'SCISSORS' && computerChoice === 'PAPER')) {
             roundResult.textContent = "User has won! 1 point awarded"
             humanScore++;
+            choiceResult.style.backgroundColor = "#37fa3d";
     } else if ((humanChoice === 'ROCK' && computerChoice === 'PAPER') ||
         (humanChoice === 'PAPER' && computerChoice === 'SCISSORS') ||
         (humanChoice === 'SCISSORS' && computerChoice === 'ROCK')) {
             roundResult.textContent = "Computer has won! 1 point awarded"
             computerScore++;
+            choiceResult.style.backgroundColor = "#fa3737";
     } else {
         roundResult.textContent = "We have a draw! No point awarded"
+        choiceResult.style.backgroundColor = "#fff";
     }
     gameScore.textContent = `Game Scores = User Score: ${humanScore} | Computer Score: ${computerScore}`;
 }
@@ -105,6 +108,7 @@ function clearAll() {
     rockBtn.disabled = false;
     paperBtn.disabled = false;
     scissorBtn.disabled = false;
+    choiceResult.style.backgroundColor = "#fff";
 };
 
 // Event Listeners for the buttons
