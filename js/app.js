@@ -25,6 +25,16 @@ gameScoreLeft.classList.add("game-score");
 const gameScoreRight = document.createElement("div");
 gameScoreRight.classList.add("game-score")
 
+const userScoreHeading = document.createElement("p");
+userScoreHeading.textContent = "User Score";
+const userScoreDisplay = document.createElement("p");
+userScoreDisplay.textContent = "44";
+
+const computerScoreHeading = document.createElement("p");
+computerScoreHeading.textContent = "Computer Score";
+const computerScoreDisplay = document.createElement("p");
+computerScoreDisplay.textContent = "55";
+
 // final result display
 const winnerResults = document.createElement("div");
 const winner = document.createElement("h3");
@@ -41,6 +51,11 @@ resultContainer.appendChild(resultRound);
 
 resultRound.appendChild(gameScoreLeft);
 resultRound.appendChild(gameScoreRight);
+
+gameScoreLeft.appendChild(userScoreHeading);
+gameScoreLeft.appendChild(userScoreDisplay);
+gameScoreRight.appendChild(computerScoreHeading);
+gameScoreRight.appendChild(computerScoreDisplay);
 
 winnerResults.appendChild(winner);
 

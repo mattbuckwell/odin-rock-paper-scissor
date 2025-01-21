@@ -71,5 +71,17 @@ h3 {
     height: 100%;
     width: 50%;
     border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+.game-score > p {
+   margin: 5px 0;
+}
+
+.game-score > p + p {
+    font-size: 2rem;
+    font-weight: bold;
+}
