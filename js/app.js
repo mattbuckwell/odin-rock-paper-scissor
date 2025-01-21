@@ -16,11 +16,14 @@ const userImg = document.createElement("img");
 const computerImg = document.createElement("img");
 
 
-// p elements below to be changed
+// Round result div to hold the two game scores
 const resultRound = document.createElement("div");
 resultRound.classList.add("result-round");
-const gameScore = document.createElement("div");
-gameScore.classList.add("game-score");
+// Left = user game score, Right = computer game score
+const gameScoreLeft = document.createElement("div");
+gameScoreLeft.classList.add("game-score");
+const gameScoreRight = document.createElement("div");
+gameScoreRight.classList.add("game-score")
 
 // final result display
 const winnerResults = document.createElement("div");
@@ -35,7 +38,9 @@ choiceResult.appendChild(computerImg);
 
 resultContainer.appendChild(choiceResult);
 resultContainer.appendChild(resultRound);
-resultRound.appendChild(gameScore);
+
+resultRound.appendChild(gameScoreLeft);
+resultRound.appendChild(gameScoreRight);
 
 winnerResults.appendChild(winner);
 

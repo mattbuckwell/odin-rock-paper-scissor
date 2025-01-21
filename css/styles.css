@@ -64,10 +64,11 @@ h3 {
 .result-round {
     height: 100px;
     border: 1px solid black;
+    display: flex;
 }
 
 .result-round .game-score {
-    height: 50%;
+    height: 100%;
     width: 50%;
     border: 1px solid red;
 }
