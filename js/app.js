@@ -28,12 +28,13 @@ gameScoreRight.classList.add("game-score")
 const userScoreHeading = document.createElement("p");
 userScoreHeading.textContent = "User Score";
 const userScoreDisplay = document.createElement("p");
-userScoreDisplay.textContent = "44";
+userScoreDisplay.textContent = "0";
+
 
 const computerScoreHeading = document.createElement("p");
 computerScoreHeading.textContent = "Computer Score";
 const computerScoreDisplay = document.createElement("p");
-computerScoreDisplay.textContent = "55";
+computerScoreDisplay.textContent = "0";
 
 // final result display
 const winnerResults = document.createElement("div");
@@ -88,12 +89,14 @@ function playRound (humanChoice, computerChoice) {
         (humanChoice === 'SCISSORS' && computerChoice === 'PAPER')) {
             console.log("User has won! 1 point awarded");
             humanScore++;
+            userScoreDisplay.textContent = `${humanScore}`;
             choiceResult.style.backgroundColor = "#37fa3d";
     } else if ((humanChoice === 'ROCK' && computerChoice === 'PAPER') ||
         (humanChoice === 'PAPER' && computerChoice === 'SCISSORS') ||
         (humanChoice === 'SCISSORS' && computerChoice === 'ROCK')) {
             console.log("Computer has won! 1 point awarded");
             computerScore++;
+            computerScoreDisplay.textContent = `${computerScore}`;
             choiceResult.style.backgroundColor = "#fa3737";
     } else {
         console.log("We have a draw! No point awarded");
