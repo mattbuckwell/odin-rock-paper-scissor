@@ -85,7 +85,6 @@ function playRound (humanChoice, computerChoice) {
         choiceResult.style.backgroundColor = "#fff";
     }
     console.log(`Game Scores = User Score: ${humanScore} | Computer Score: ${computerScore}`);
-    //gameScore.textContent = `Game Scores = User Score: ${humanScore} | Computer Score: ${computerScore}`;
 }
 
 // Helper function to find out who won the game
@@ -112,8 +111,6 @@ function playGame (humanSelection) {
 function clearAll() {
     userImg.src = "";
     computerImg.src = "";
-    roundResult.textContent = "";
-    gameScore.textContent = "";
     humanScore = 0;
     computerScore = 0;
     winner.textContent = "";
