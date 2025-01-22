@@ -14,6 +14,7 @@ const resultContainer = document.createElement("div");
 // Choice result displays the image of the selection made
 const choiceResult = document.createElement("div"); // <-- container to hold the images
 choiceResult.classList.add("choice")
+choiceResult.style.height = "80px";
 
 const userImg = document.createElement("img");
 const computerImg = document.createElement("img");
