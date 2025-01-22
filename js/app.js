@@ -138,6 +138,8 @@ function clearAll() {
     paperBtn.disabled = false;
     scissorBtn.disabled = false;
     choiceResult.style.backgroundColor = "#fff";
+    userScoreDisplay.textContent = "0";
+    computerScoreDisplay.textContent = "0";
 };
 
 // Event Listeners for the buttons
