@@ -52,13 +52,14 @@ h3 {
     background-color:midnightblue;
     font-size: 1rem;
     font-weight: bold;
-    border: none;
+    border: none;    
 }
 
 .choice {
     display: flex;
     justify-content: space-evenly;
     padding: 40px 0;
+    margin-top: 10px;
 }
 
 .choice + p,
