@@ -5,10 +5,13 @@ const scissorBtn = document.querySelector(".scissors");
 const finishBtn = document.querySelector(".finish");
 const reset = document.querySelector(".reset");
 
+// Game container - holds resultContainer and winnerResults
 const gameContainer = document.querySelector(".game-container");
 
+// Result container - holds choiceResult and resultRound
 const resultContainer = document.createElement("div");
 
+// Choice result displays the image of the selection made
 const choiceResult = document.createElement("div"); // <-- container to hold the images
 choiceResult.classList.add("choice")
 
@@ -43,12 +46,11 @@ const winner = document.createElement("h3");
 gameContainer.appendChild(resultContainer);
 gameContainer.appendChild(winnerResults);
 
-choiceResult.appendChild(userImg);
-choiceResult.appendChild(computerImg);
-
-
 resultContainer.appendChild(choiceResult);
 resultContainer.appendChild(resultRound);
+
+choiceResult.appendChild(userImg);
+choiceResult.appendChild(computerImg);
 
 resultRound.appendChild(gameScoreLeft);
 resultRound.appendChild(gameScoreRight);

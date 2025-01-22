@@ -15,6 +15,11 @@ h3 {
     text-align: center;
 }
 
+h3 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
 .game-header {
     display: flex;
     align-items: center;
@@ -32,6 +37,11 @@ h3 {
     justify-content: space-around;
 }
 
+.reset,
+.finish {
+    background-color: forestgreen;
+}
+
 .btn {
     border-radius: 10px;
     width: 100px;
@@ -42,11 +52,6 @@ h3 {
     font-size: 1rem;
     font-weight: bold;
     border: none;
-}
-
-.reset,
-.finish {
-    background-color: forestgreen;
 }
 
 .choice {
