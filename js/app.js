@@ -118,7 +118,7 @@ function finalResults (humanResult, computerResult) {
         return 'Computer has dominated!';
     } else {
         winner.style.color = "black";
-        return 'Both players are equally matched!';
+        return 'Players are equal!';
     }
 }
 
